@@ -1,0 +1,8 @@
+{
+
+    "token": "",
+    "prefix": "!",
+    "mongoPath": "mongodb+srv://Anindya123:a3b4gana@cluster0.9hhgx.mongodb.net/disbot",
+    "redisPath": "//redis-16645.c52.us-east-1-4.ec2.cloud.redislabs.com:16645?password=n8ZAjgiFF1nRDrWTX4Hs9O11wk9kBEKO"
+
+}
