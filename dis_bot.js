@@ -9,7 +9,7 @@ const welcome = require('./welcome');
 const memberCount = require('./member-count');
 const sendMessage = require('./send-message');
 const messageCount = require('./message-counter');
-// const mongo = require('./mongo');
+const mongo = require('./mongo');
 const mute = require('./mute');
 require('dotenv/config');
 
@@ -17,15 +17,15 @@ client.on('ready', async () => {
 
     console.log('waifu is ready to go!');
 
-    // await mongo().then(mongoose => {
-    //     try {
-    //         console.log('Successfully connected to monogo!');
-    //     } finally {
-    //         mongoose.connection.close();
-    //     }
-    // });
+    await mongo().then(mongoose => {
+        try {
+            console.log('Successfully connected to monogo!');
+        } finally {
+            mongoose.connection.close();
+        }
+    });
 
-    //firstMessage(client, '798421536129548298', 'hello world!', ['🍉', '😶', '❤️']);
+    // firstMessage(client, '798421536129548298', 'hello world!', ['🍉', '😶', '❤️']);
 
     privateMessage(client, 'ping', 'pong!');   
     client.users.fetch('702144210354045078').then(user => {
